@@ -28,10 +28,6 @@ jobs:
         path: playwright-report/
         retention-days: 30
 
-    - name: Zip HTML report
-      if: ${{ !cancelled() }}
-      run: zip -r playwright-report.zip playwright-report
-
     - name: Send report email
       if: ${{ !cancelled() }}
       uses: dawidd6/action-send-mail@v3
@@ -49,5 +45,4 @@ jobs:
           Commit: ${{ github.sha }}
           Status: ${{ job.status }}
 
-          Full HTML report attached. You can also download it from the Actions run artifacts.
-        attachments: playwright-report.zip
+          Download the HTML report from the Actions run artifacts.
