@@ -8,7 +8,10 @@ export default defineConfig({
 
   timeout: 60000,
 
-  reporter: 'html',
+  reporter: [
+    ['allure-playwright'],
+    ['html', { open: 'never' }],
+  ],
 
   use: {
     headless: Boolean(process.env.CI),
