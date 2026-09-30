@@ -1,0 +1,23 @@
+CREATE: Student inserted
+Inserted ID: 6abcb4a57a382cb3d961f254
+READ: Student found
+{
+  _id: new ObjectId('6abcb4a57a382cb3d961f254'),
+  name: 'TestUser',
+  age: 25,
+  course: 'Playwright',
+  experience: 3,
+  city: 'Chennai'
+}
+UPDATE: Experience changed from 3 to 4
+READ after UPDATE:
+{
+  _id: new ObjectId('6abcb4a57a382cb3d961f254'),
+  name: 'TestUser',
+  age: 25,
+  course: 'Playwright',
+  experience: 4,
+  city: 'Chennai'
+}
+DELETE: Student deleted
+MongoDB CRUD test completed
